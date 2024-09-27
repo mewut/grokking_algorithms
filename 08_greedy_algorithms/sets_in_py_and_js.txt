@@ -1,0 +1,39 @@
+Даны множества:
+
+"mt", "wa", "or"
+"id", "nv", "ut", "wa"
+
+Python:
+Инициализация множеств
+set1 = {"mt", "wa", "or"}
+set2 = {"id", "nv", "ut", "wa"}
+
+Объединение множеств
+union_set = set1 | set2
+
+Пересечение множеств
+intersection_set = set1 & set2
+
+Вычитание множеств
+difference_set = set1 - set2
+
+Симметрическая разность (элементы, которые есть в одном из множеств, но не в обоих)
+symmetric_difference_set = set1 ^ set2
+
+
+JavaScript:
+Инициализация множеств
+let set1 = new Set(["mt", "wa", "or"]);
+let set2 = new Set(["id", "nv", "ut", "wa"]);
+
+Объединение множеств
+let unionSet = new Set([...set1, ...set2]);
+
+Пересечение множеств
+let intersectionSet = new Set([...set1].filter(x => set2.has(x)));
+
+Вычитание множеств
+let differenceSet = new Set([...set1].filter(x => !set2.has(x)));
+
+Симметрическая разность (элементы, которые есть в одном из множеств, но не в обоих)
+let symmetricDifferenceSet = new Set([...set1, ...set2].filter(x => !(set1.has(x) && set2.has(x))));
